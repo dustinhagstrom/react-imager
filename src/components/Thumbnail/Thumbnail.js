@@ -7,7 +7,11 @@ export class Thumbnail extends Component {
     return (
       <div className="display-class">
         <li>
-          <img src={process.env.PUBLIC_URL + `images/${item}`} alt="fish" />
+          <img
+            src={process.env.PUBLIC_URL + `images/${item}`}
+            alt="fish"
+            onClick={() => {}}
+          />
         </li>
       </div>
     );
