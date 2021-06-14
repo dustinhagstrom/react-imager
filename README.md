@@ -9,7 +9,7 @@
 - use <img src={grab path}> to plug in the images
 - Path to image should be nameOfFolder/nameOfFile… Ex: images/photo2.jpeg (React will know to go to public folder for it)
 
-7. - Create a Display.js component that hold the large image on the top of the page. Child to Imager.js
+7. - Create a Display.js component that holds the large image on the top of the page. Child to Imager.js
 8. - Create a Thumbnail.js component that holds each of the 12 images as thumbnails. Child to Imager.js
 9. - When the random button is clicked, a random image will be chosen and displayed on the Display.js. (Hint: Should you use Index or Key for this?)
 10. - When the backwards button is clicked it goes to the previous image in the array, same for forward button it increments to the next image. (Hint: Should you use Index or Key for this?)

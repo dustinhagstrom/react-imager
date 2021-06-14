@@ -1,0 +1,21 @@
+.imager-class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px [col-start]);
+    grid-template-rows: repeat(3, 100px [row-start]);
+    column-gap: 15px;
+    row-gap: 15px;
+    padding-left: 0;
+}
+
+
