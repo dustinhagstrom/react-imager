@@ -66,14 +66,14 @@ export class Imager extends Component {
   };
 
   render() {
-    const { imageArray } = this.state.imageArray;
-    const { currentImage } = this.state.currentImage; //why this destructure isn't working??
+    const { imageArray, currentImage, currentIndex } = this.state;
     return (
       <div className="imager-class">
+        <h1>Imager</h1>
         <Display
           array={imageArray}
-          currentImage={this.state.currentImage}
-          index={this.state.currentIndex}
+          currentImage={currentImage}
+          index={currentIndex}
         />
         <div className="buttons">
           <button onClick={this.handleRandomPicture} id="random">
