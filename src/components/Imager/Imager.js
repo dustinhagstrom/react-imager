@@ -21,12 +21,20 @@ export class Imager extends Component {
       "/timeless.jpeg",
       "/timeMachine.jpeg",
     ],
-    currentImage: "/bearGottaEat.jpeg",
-    currentIndex: 1,
+    currentImage: "",
+    currentIndex: "",
   };
 
+  componentDidMount() {
+    let myRando = Math.floor(Math.random() * 12);
+    this.setState({
+      currentImage: this.state.imageArray[myRando],
+      currentIndex: myRando,
+    });
+  }
+
   handleRandomPicture = () => {
-    const myRando = Math.floor(Math.random() * 12);
+    let myRando = Math.floor(Math.random() * this.state.imageArray.length);
     let randomPic = this.state.imageArray[myRando];
     this.setState({
       currentImage: randomPic,
@@ -35,7 +43,7 @@ export class Imager extends Component {
   };
   handleForwardPicture = () => {
     let newIndex = this.state.currentIndex + 1;
-    if (newIndex > 11) {
+    if (newIndex > this.state.imageArray.length - 1) {
       newIndex = 0;
     }
     let nextPic = this.state.imageArray[newIndex];
@@ -47,7 +55,7 @@ export class Imager extends Component {
   handleBackwardPicture = () => {
     let newIndex = this.state.currentIndex - 1;
     if (newIndex < 0) {
-      newIndex = 11;
+      newIndex = this.state.imageArray.length - 1;
     }
     let nextPic = this.state.imageArray[newIndex];
     this.setState({
